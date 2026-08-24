@@ -114,8 +114,8 @@ elif command -v vim >/dev/null 2>&1; then
 	export EDITOR=vim
 	export VISUAL=vim
 else
-	export EDITOR=vi
-	export VISUAL=vi
+	export EDITOR=nano
+	export VISUAL=nano
 fi
 command -v pico >/dev/null 2>&1 && alias spico='sudo pico'
 command -v nano >/dev/null 2>&1 && alias snano='sudo nano'
