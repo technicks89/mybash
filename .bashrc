@@ -101,6 +101,9 @@ if [[ $iatest -gt 0 ]]; then bind "set completion-ignore-case on"; fi
 if [[ $iatest -gt 0 ]]; then bind "set show-all-if-ambiguous On"; fi
 
 # Set the default editor
+if command -v nano >/dev/null 2>&1; then
+    export EDITOR=nano
+	export VISUAL=nano
 if command -v nvim >/dev/null 2>&1; then
 	export EDITOR=nvim
 	export VISUAL=nvim
@@ -117,7 +120,7 @@ fi
 command -v pico >/dev/null 2>&1 && alias spico='sudo pico'
 command -v nano >/dev/null 2>&1 && alias snano='sudo nano'
 sedit() {
-	sudo "${SUDO_EDITOR:-${EDITOR:-vi}}" "$@"
+	sudo "${SUDO_EDITOR:-${EDITOR:-nano}}" "$@"
 }
 
 # To have colors for ls and all grep commands such as grep, egrep and zgrep
@@ -189,7 +192,7 @@ alert() {
 
 # Edit this .bashrc file
 ebrc() {
-	"${EDITOR:-vi}" "$HOME/.bashrc"
+	"${EDITOR:-nano}" "$HOME/.bashrc"
 }
 
 # Show help for this .bashrc file
