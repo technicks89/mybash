@@ -230,7 +230,7 @@ fi
 command -v multitail >/dev/null 2>&1 && alias multitail='multitail --no-repeat -c'
 command -v freshclam >/dev/null 2>&1 && alias freshclam='sudo freshclam'
 svi() {
-	sudo "${EDITOR:-vi}" "$@"
+	sudo "${EDITOR:-nano}" "$@"
 }
 if command -v pacman >/dev/null 2>&1 && command -v yay >/dev/null 2>&1 && command -v fzf >/dev/null 2>&1; then
 	alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S"
