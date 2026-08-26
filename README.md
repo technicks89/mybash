@@ -1,10 +1,10 @@
-# TechNicks's `.bashrc` Configuration (Linux/macOS)
+# TechNicks' `.bashrc` Configuration (Linux/macOS)
 
-![Lyona-Bash running in Alacritty on Arch Linux, showing the fastfetch summary and the Starship prompt](assets/terminal.png)
+![mybash running in Alacritty on Arch Linux, showing the fastfetch summary and the Starship prompt](assets/terminal.png)
 
 ## Overview
 
-Lyona-Bash is a batteries-included `.bashrc` configuration plus the supporting scripts and config files needed to set it up. It configures the shell session with aliases, functions, a Starship prompt, fastfetch, fzf, and zoxide, turning a stock Bash into a considerably more usable terminal on Linux and macOS.
+mybash is a batteries-included `.bashrc` configuration plus the supporting scripts and config files needed to set it up. It configures the shell session with aliases, functions, a Starship prompt, fastfetch, fzf, and zoxide, turning a stock Bash into a considerably more usable terminal on Linux and macOS.
 
 ## Table of Contents
 
@@ -32,8 +32,8 @@ Lyona-Bash is a batteries-included `.bashrc` configuration plus the supporting s
 ## Installation
 
 ```sh
-git clone --depth=1 https://github.com/technicks89/Lyona-Bash.git
-cd Lyona-Bash
+git clone --depth=1 https://github.com/technicks89/mybash.git
+cd mybash
 ./setup.sh
 ```
 
@@ -95,7 +95,7 @@ Palettes are applied to the generated config, not stacked, so switching palettes
 ## Uninstallation
 
 ```sh
-cd Lyona-Bash
+cd mybash
 ./uninstall.sh              # remove configuration and installed software
 ./uninstall.sh --keep-deps  # remove configuration only, keep software and fonts
 ```

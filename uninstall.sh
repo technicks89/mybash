@@ -200,9 +200,9 @@ restore_terminal_font() {
 
 remove_mybash_data() {
 	if [ -d "$MYBASHDIR" ]; then
-		print_colored "$YELLOW" "Removing Lyona-Bash data directory..."
+		print_colored "$YELLOW" "Removing mybash data directory..."
 		rm -rf "$MYBASHDIR"
-		print_colored "$GREEN" "Lyona-Bash data directory removed"
+		print_colored "$GREEN" "mybash data directory removed"
 	fi
 }
 
@@ -216,7 +216,7 @@ for ARG in "$@"; do
 	-h | --help)
 		printf '%s\n' "Usage: ./uninstall.sh [--keep-deps]"
 		printf '%s\n' ""
-		printf '%s\n' "  --keep-deps  Remove Lyona-Bash configuration but keep installed software and fonts."
+		printf '%s\n' "  --keep-deps  Remove mybash configuration but keep installed software and fonts."
 		exit 0
 		;;
 	*)
