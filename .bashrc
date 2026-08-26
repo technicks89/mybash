@@ -102,9 +102,9 @@ if [[ $iatest -gt 0 ]]; then bind "set show-all-if-ambiguous On"; fi
 
 # Set the default editor
 if command -v nano >/dev/null 2>&1; then
-    export EDITOR=nano
+	export EDITOR=nano
 	export VISUAL=nano
-if command -v nvim >/dev/null 2>&1; then
+elif command -v nvim >/dev/null 2>&1; then
 	export EDITOR=nvim
 	export VISUAL=nvim
 	alias vim='nvim'
@@ -114,8 +114,8 @@ elif command -v vim >/dev/null 2>&1; then
 	export EDITOR=vim
 	export VISUAL=vim
 else
-	export EDITOR=nano
-	export VISUAL=nano
+	export EDITOR=vi
+	export VISUAL=vi
 fi
 command -v pico >/dev/null 2>&1 && alias spico='sudo pico'
 command -v nano >/dev/null 2>&1 && alias snano='sudo nano'

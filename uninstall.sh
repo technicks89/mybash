@@ -6,7 +6,7 @@ RED=$(tput setaf 1)
 YELLOW=$(tput setaf 3)
 GREEN=$(tput setaf 2)
 
-AMABASHDIR="$HOME/.local/share/ama-bash"
+MYBASHDIR="$HOME/.local/share/mybash"
 PACKAGER=""
 SUDO_CMD=""
 
@@ -164,7 +164,7 @@ restore_terminal_font() {
 		return 0
 	fi
 
-	FONT_BACKUP_DIR="$USER_HOME/.local/share/ama-bash"
+	FONT_BACKUP_DIR="$MYBASHDIR"
 	PTYXIS_BACKUP="$FONT_BACKUP_DIR/terminal-font-ptyxis.backup"
 	GNOME_BACKUP="$FONT_BACKUP_DIR/terminal-font-gnome.backup"
 
@@ -198,11 +198,11 @@ restore_terminal_font() {
 	fi
 }
 
-remove_ama-bash_data() {
-	if [ -d "$AMABASHDIR" ]; then
-		print_colored "$YELLOW" "Removing ama-bash data directory..."
-		rm -rf "$AMABASHDIR"
-		print_colored "$GREEN" "ama-bash data directory removed"
+remove_mybash_data() {
+	if [ -d "$MYBASHDIR" ]; then
+		print_colored "$YELLOW" "Removing Lyona-Bash data directory..."
+		rm -rf "$MYBASHDIR"
+		print_colored "$GREEN" "Lyona-Bash data directory removed"
 	fi
 }
 
@@ -216,7 +216,7 @@ for ARG in "$@"; do
 	-h | --help)
 		printf '%s\n' "Usage: ./uninstall.sh [--keep-deps]"
 		printf '%s\n' ""
-		printf '%s\n' "  --keep-deps  Remove ama-bash configuration but keep installed software and fonts."
+		printf '%s\n' "  --keep-deps  Remove Lyona-Bash configuration but keep installed software and fonts."
 		exit 0
 		;;
 	*)
@@ -239,6 +239,6 @@ else
 fi
 remove_configs
 restore_terminal_font
-remove_ama-bash_data
+remove_mybash_data
 
 print_colored "$GREEN" "Uninstallation complete. Please restart your shell for changes to take effect."

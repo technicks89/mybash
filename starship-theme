@@ -20,9 +20,10 @@ declare -A THEMES=(
 	[kali]="12233A 2777FF 17539E 4D8DFF 0E2A5E 2777FF"
 	[gentoo]="2E2A40 62548E 4A3F73 9B8AC4 39305C 62548E"
 	[dracula]="6272A4 BD93F9 FF79C6 8BE9FD 50FA7B BD93F9"
+	[tokyonight]="3B4261 7AA2F7 BB9AF7 7DCFFF FF9E64 414868"
 )
 
-ORDER=(ubuntu claude arch fedora debian mint manjaro popos kali gentoo dracula nord)
+ORDER=(ubuntu claude arch fedora debian mint manjaro popos kali gentoo dracula tokyonight nord)
 
 error() {
 	printf 'starship-theme: %s\n' "$*" >&2
