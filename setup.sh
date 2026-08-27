@@ -150,7 +150,7 @@ install_dependencies_linux() {
 	elif command_exists yum; then
 		sudo_cmd yum install -y bash-completion bat tree multitail fastfetch neovim trash-cli fzf zoxide curl fontconfig tar xz
 	elif command_exists pacman; then
-		sudo_cmd pacman -S --needed bash-completion bat tree multitail fastfetch neovim trash-cli fzf zoxide curl fontconfig tar xz
+		sudo_cmd pacman -S --needed bash-completion bat tree multitail fastfetch neovim trash-cli starship fzf zoxide curl fontconfig tar xz
 	elif command_exists zypper; then
 		sudo_cmd zypper install -y bash-completion bat tree multitail fastfetch neovim trash-cli fzf zoxide curl fontconfig tar xz
 	elif command_exists emerge; then
