@@ -25,6 +25,10 @@ $time\
 [ ](fg:#33658A)\
 """
 command_timeout = 5000
+# Starship gives up scanning the current directory after 30 ms by default,
+# which a cold disk cache or a busy system can exceed, printing a warning in
+# new terminals. Allow 500 ms before it gives up.
+scan_timeout = 500
 # Disable the blank line at the start of the prompt
 # add_newline = false
 
